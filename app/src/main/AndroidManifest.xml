@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PemsCross"
         tools:targetApi="31">
         <activity
+            android:name=".CatalogAccessoriesActivity"
+            android:exported="false" />
+        <activity
             android:name=".CatalogsSelectionActivity"
             android:exported="false" />
         <activity

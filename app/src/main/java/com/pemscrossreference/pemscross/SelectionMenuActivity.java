@@ -9,19 +9,27 @@ import android.widget.Button;
 
 public class SelectionMenuActivity extends AppCompatActivity {
 
-    Button button;
+    Button crossButton, catalogButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection_menu);
 
-        button = (Button) findViewById(R.id.goToCrossButton);
+        crossButton = (Button) findViewById(R.id.goToCrossButton);
+        catalogButton = (Button) findViewById(R.id.goToCatalogButton);
 
-        button.setOnClickListener(new View.OnClickListener(){
+        crossButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 GoToCrossActivity();
+            }
+        });
+
+        catalogButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                GoToCatalogActivity();
             }
         });
 
@@ -32,4 +40,8 @@ public class SelectionMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void GoToCatalogActivity(){
+        Intent intent = new Intent(this, CatalogsSelectionActivity.class );
+        startActivity(intent);
+    }
 }

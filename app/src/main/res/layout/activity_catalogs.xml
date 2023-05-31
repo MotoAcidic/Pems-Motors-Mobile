@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".CatalogsSelectionActivity">
 
+    <Button
+        android:id="@+id/backToMainMenuButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="2dp"
+        android:text="Main Menu" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="408dp"
@@ -13,5 +23,30 @@
         android:src="@drawable/pems_logo"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="-2dp" />
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="98dp"
+        android:text="Catalogs"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/accessoriesButton"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="205dp"
+        android:text="Accessories"
+        app:icon="@drawable/capacitor" />
+
 
 </RelativeLayout>

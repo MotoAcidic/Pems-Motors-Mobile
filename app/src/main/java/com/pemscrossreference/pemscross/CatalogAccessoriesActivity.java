@@ -12,43 +12,37 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-public class CatalogsSelectionActivity extends AppCompatActivity {
+public class CatalogAccessoriesActivity extends AppCompatActivity {
 
     private WebView webView;
-    Button mainMenuButton, accessoriesButton;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_catalogs);
+        setContentView(R.layout.activity_catalog_accessories);
 
         // Button for navigation
-        mainMenuButton = (Button) findViewById(R.id.backToMainMenuButton2);
-        accessoriesButton = (Button) findViewById(R.id.accessoriesButton);
-
-        mainMenuButton.setOnClickListener(new View.OnClickListener(){
+        button = (Button) findViewById(R.id.backToMainMenuButton3);
+        button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 GoToSelectionMenuActivity();
             }
         });
 
-        accessoriesButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                GoToCatalogAccessoriesActivity();
-            }
-        });
-
+        // Start for the web view of cross reference
+        String pdfViewerURL = "https://drive.google.com/viewerng/viewer?embedded=true&url=";
+        WebView webview = (WebView) findViewById(R.id.webview);
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.getSettings().setSupportZoom(true);
+        String pdfURL = "https://www.pemsmotors.com/wp-content/uploads/AccessoryCatalogWeb-2.pdf";
+        String url = pdfViewerURL + pdfURL;
+        webview.loadUrl(url);
     }
 
     public void GoToSelectionMenuActivity(){
         Intent intent = new Intent(this,SelectionMenuActivity.class );
-        startActivity(intent);
-    }
-
-    public void GoToCatalogAccessoriesActivity(){
-        Intent intent = new Intent(this, CatalogAccessoriesActivity.class );
         startActivity(intent);
     }
 
@@ -61,4 +55,5 @@ public class CatalogsSelectionActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
 }
