@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatalogsSelectionActivity">
+    android:background="@drawable/pems_splash_transparent"
+    tools:context=".CatalogsSelectionActivity"
+    >
 
     <Button
         android:id="@+id/backToMainMenuButton2"
@@ -16,15 +18,6 @@
         android:layout_marginBottom="2dp"
         android:text="Main Menu" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="408dp"
-        android:layout_height="80dp"
-        android:src="@drawable/pems_logo"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="-2dp" />
-
-
 
     <TextView
         android:id="@+id/textView"
@@ -32,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="123dp"
         android:text="Catalogs"
         android:textSize="50dp" />
 
